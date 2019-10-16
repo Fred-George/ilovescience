@@ -1,0 +1,46 @@
+// Cookies policy
+
+footer{
+    padding: 20px 10px 40px 0;
+    background-color: $primary-color;
+    color: $white;
+    font-family: $header-font-family;
+    .social-footer{
+        float: right;
+        margin-right: 10px;
+        .social-icons {
+            a{
+                border-style: none;
+            }
+        }
+    }
+    .logos{
+        margin-bottom: 2em;
+        text-align: center;
+        .embedded-entity{
+            display: inline-block;
+            margin: 10px;
+        }
+    }
+}
+.eu-cookie-compliance-banner{
+    padding: 20px 0 0 0;
+    background-color: $primary-color;
+    color: $white;
+
+    button{
+        font-family: $header-font-family;
+        margin: 20px 0 35px 0;
+        padding: 11px 16px;
+        transition: all .3s linear;
+        display: inline-block;
+        border: 3px solid $white;
+        color: $white;
+        &.decline-button{
+            background: darken($primary-color, 3);
+            box-shadow: none;
+            text-shadow: none;
+            border-width: 2px;
+        }
+    }
+}

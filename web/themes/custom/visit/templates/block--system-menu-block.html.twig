@@ -1,0 +1,8 @@
+    {% set heading_id = attributes.id ~ '-menu'|clean_id %}
+    <div {{ attributes }}>
+    <nav id="nav">
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+    </nav>
+    </div>

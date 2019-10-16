@@ -1,0 +1,11 @@
+global:
+  version: 1.0
+  css:
+    base:
+      css/visit.css: {}
+  js:
+    js/visit.js: {}
+    js/jquery.sticky.js: {}
+    js/jquery.enllax.js: {}
+  dependencies:
+    - core/jquery

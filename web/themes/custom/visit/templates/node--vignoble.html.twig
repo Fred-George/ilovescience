@@ -1,0 +1,24 @@
+<article id="node-{{ node.id }}" {{ attributes }}>
+  {% if page %}
+  {{ content.field_image }}
+  {% else %}
+  <a href="{{ path('entity.node.canonical', {'node': node.id}) }}">
+  {% endif %}
+  <div class="vignoble-content">
+    {{ title_prefix }}
+    {% if not page %}
+      {{ content.field_image }}
+      <h3{{ title_attributes }}>{{ label }}</h3>
+    {% endif %}
+    {{ title_suffix }}
+
+    {# We hide the comments and links now so that we can render them later. #}
+    <div{{ content_attributes }}>
+      {{ content|without('comment', 'links', 'field_tags', 'field_image') }}
+    </div>
+    
+  </div>
+  {% if not page %}
+  </a>
+  {% endif %}
+</article>

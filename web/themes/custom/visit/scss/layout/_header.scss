@@ -1,0 +1,219 @@
+// Non-modular or client styles for .l-header region.
+iframe {
+    border: 0 !important;
+}
+
+.social-bar{
+    padding: 10px;
+    text-align: right;
+    >.row{
+        position: relative;
+    }
+}
+
+.social-icons {
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    list-style: none;
+    a {
+        display: inline-block;
+        font-size: 1.3rem;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        border: 1px solid $black;
+        background-color: $white;
+        border-radius: 100%;
+        padding: 0 0 0 5px;
+        &:hover, &:focus{
+            opacity: 0.7;
+        }
+    }
+    span {
+        display: none;
+    }
+}
+.social-top{
+    .social-icons{
+        a{
+            color: $white;
+            background-color: $primary-color;
+            border: none;
+        }
+    }
+}
+.block-selecteurdelanguecontent, .block-selecteurdelanguecontent-2{
+    z-index: 20;
+    ul{
+        list-style: none;
+        float: right;
+        margin: 0;
+        li{
+            display: inline;
+            padding: 0 0 0 10px;
+            &.is-active{
+                font-family: $header-font-family;
+            }
+            a{
+                color: $black;
+                background-color: $secondary-color;
+                font-size: 1.2rem;
+                width: 32px;
+                height: 32px;
+                text-align: center;
+                display: inline-block;
+                padding: 0;
+                text-transform: lowercase;
+                border-radius: 100%;
+                &:hover, &:focus{
+                    $color: $white;
+                }
+            }
+        }
+    }
+}
+
+.block-selecteurdelanguecontent-2{
+    float: right;
+    ul{
+        li{
+            a{
+                font-size: 1rem;
+                width: 25px;
+                height: 25px;
+                background-color: $primary-color;
+                border-radius: 0;
+                border: 1px solid $white;
+            }
+        }
+    }
+}
+
+.block-marquedusite{
+    position: absolute;
+    float:left;
+    height: 50px;
+    width: 50px;
+    margin:5px 20px 5px 0;
+    z-index: 20;
+}
+.block-marquedusite-2{
+    position: absolute;
+    top: 12px;
+    left: 45px;
+    font-family: $header-font-family;
+    a{
+        color: $black;
+    }
+}
+
+#header{
+    width: 100%;
+    background: $primary-color;
+    box-shadow: 2px 0px 3px rgba($black, 0.3);
+    .top-bar{
+        background: $white;
+        position: absolute;
+        width: 100%;
+        z-index: 120;
+        border-bottom: 3px solid $primary-color;
+    }
+    .top-bar-left {
+        width: 100%;
+        nav{
+            margin: 0;
+            padding: 0;
+            li{
+                padding-right: 15px;
+            }
+            a{
+                transition: all 0.3s ease-out;
+                padding: 5px 10px 5px 10px;
+                margin: 20px 0 20px 15px;
+                border-color: transparent;
+                border-width: 0 0 0 3px;
+                border-style: solid;
+                &:hover, &:focus, &.is-active{
+                    border-color: $primary-color;
+                }
+                background-color: transparent;
+            }
+        }
+    }
+    .title-bar{
+        background: $primary-color;
+        button.menu-icon, a{
+            color: $white;
+            &::after{
+                background: $white;
+                box-shadow: 0 7px 0 $white,0 14px 0 $white;
+            }
+        }
+    }
+    .active {
+        color: $primary-color;
+        border-color: $primary-color;
+    }
+    .menu > li > a{
+        color: $black;
+        font-family: $header-font-family;
+        text-transform: uppercase;
+    }
+    .social-mobile{
+        padding: 5px 0 5px 0;
+        margin: 5px 0 20px 30px;
+        a{
+            border-style: none;
+            background-color: $primary-color;
+            color: $white;
+        }
+    }
+
+}
+
+@include breakpoint(medium up){
+    .block-selecteurdelanguecontent{
+        position: absolute;
+        top: 0;
+        right: 0;
+        li{
+            &.is-active{
+                a{
+                    color: $white;
+                    background-color: $primary-color;
+                }
+            }
+            a{
+                &:hover, &:focus{
+                    color: $white !important;
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+    #header{
+        background: $secondary-color;
+        .top-bar-left {
+            width: 100%;
+            nav{
+                margin-left: 70px;
+                li{
+                    padding-right: 15px;
+                }
+                a{
+                    padding: 25px 0 5px 0;
+                    margin: 0 10px 0 0;
+                    border-width: 0 0 3px 0;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .top-bar-right {
+            position: relative;
+        }
+        border-width: 3px 0 3px 0;
+        border-style: solid;
+        border-color: $primary-color;
+    }
+}

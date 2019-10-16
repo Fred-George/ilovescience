@@ -1,0 +1,176 @@
+<div id="wrapper" class="off-canvas-wrapper">
+  <div class="inner-wrap off-canvas-wrapper-inner" id="inner-wrap" data-off-canvas-wrapper>
+    <aside id="left-off-canvas-menu" class="off-canvas left-off-canvas-menu position-left" role="complementary" data-off-canvas>
+      {{ page.left_off_canvas }}
+    </aside>
+
+    <aside id="right-off-canvas-menu" class="off-canvas right-off-canvas-menu position-right" role="complementary" data-off-canvas>
+      {{ page.right_off_canvas }}
+    </aside>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+      {% if page.meta_header %}
+        {% if meta_header_grid %}
+          <div class="row">
+            <div class="large-12 columns">
+        {% endif %}
+        {{ page.meta_header }}
+        {% if meta_header_grid %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+      <div class="home-first" data-enllax-ratio=".5" data-enllax-direction="vertical">
+        {% if page.topbar %}
+        <div class="social-bar hide-for-small-only">
+          <div class="row">
+            {{ page.topbar }}
+          </div>
+        </div>
+        {% endif %}
+        <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t }}">
+          {% if page.header %}
+            <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+              <button class="menu-icon" type="button" data-toggle="main-menu"></button>
+              {{ page.topbar_mobile }}
+            </div>
+            <div class="top-bar" id="main-menu">
+              <div class="row">
+                <div class="top-bar-left">
+                  {{ page.header }}
+                </div>
+                {% if page.header_right %}
+                <div class="top-bar-right hide-for-small-only">
+                  {{ page.header_right }}
+                </div>
+                {% endif %}
+                </div>
+            </div>
+          {% endif %}
+        </header>
+
+        <div class="row">
+          {% if show_account_info %}
+            <div class="{{ site_slogan ? 'large-6' : 'large-4 columns large-offset-8' }} columns hide-for-small">
+              <p>
+                {% if logged_in %}
+                  <a href="{{ path('user.page') }}">{{ 'My Account'|t }}</a>
+                  <a href="{{ path('user.logout') }}">{{ 'Logout'|t }}</a>
+                {% else %}
+                  <a href="{{ path('user.login') }}">{{ 'Login'|t }}</a>
+                  <a href="{{ path('user.register') }}">{{ 'Sign Up'|t }}</a>
+                {% endif %}
+              </p>
+            </div>
+          {% endif %}
+          {% if site_slogan %}
+            <div class="large-6 columns hide-for-small">
+              {{ site_slogan }}
+            </div>
+          {% endif %}
+          {% if show_account_info %}
+            <div class="show-for-small">
+              <div class="six mobile-two columns">
+                <p>
+                  <a href="{{ path('user.login') }}" class="radius button">{{ 'Login'|t }}</a>
+                </p>
+              </div>
+              <div class="six mobile-two columns">
+                <p>
+                  <a href="{{ path('user.register') }}" class="radius success button">{{ 'Sign Up'|t }}</a>
+                </p>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+
+        {% if messages and not zurb_foundation_messages_modal %}
+        <div class="l-messages row">
+          <div class="large-12 columns">
+            {{ messages }}
+          </div>
+        </div>
+        {% endif %}
+
+        {% if page.help %}
+        <div class="l-help row">
+          <div class="large-12 columns">
+            {{ page.help }}
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="row">
+          <main id="content" class="{{ main_grid }} columns" role="main">
+            <section id="home-zone">
+              {% if page.highlighted %}
+                {% spaceless %}
+                  {{ page.highlighted }}
+                {% endspaceless %}
+              {% endif %}
+              <a id="main-content"></a>
+              {% if breadcrumb %} {{ breadcrumb }} {% endif %}
+                {{ page.content }}
+            </section>
+          </main>
+        </div>
+      </div>
+      {% if page.homepage_zone_1 %}
+      <section id="zone1" class="zone1 section scrollto">
+        <div class="row">
+          {{ page.homepage_zone_1 }}
+        </div>
+      </section>
+      {% endif %}
+      {% if page.homepage_zone_2 %}
+      <div class="transition" data-enllax-ratio=".5" data-enllax-direction="vertical"></div>
+      <section id="new2019" class="zone2 section scrollto">
+        <div class="wrapper">
+          <div class="row">
+            {{ page.homepage_zone_2 }}
+          </div>
+        </div>
+      </section>
+      {% endif %}
+      {% if page.homepage_zone_3 %}
+      <div class="transition" data-enllax-ratio=".5" data-enllax-direction="vertical"></div>
+      <section id="zone3" class="zone3 section scrollto">
+        <div class="row">
+          {{ page.homepage_zone_3 }}
+        </div>
+      </section>
+      {% endif %}
+      {% if page.homepage_zone_4 %}
+      <div class="transition" data-enllax-ratio=".5" data-enllax-direction="vertical"></div>
+      <section id="zone4" class="zone4 section scrollto">
+        <div class="row">
+          {{ page.homepage_zone_4 }}
+        </div>
+      </section>
+      {% endif %}
+      {% if page.homepage_zone_5 %}
+      <div class="transition" data-enllax-ratio=".5" data-enllax-direction="vertical"></div>
+      <section id="presale" class="zone5 section scrollto">
+        <div class="row">
+          {{ page.homepage_zone_5 }}
+        </div>
+      </section>
+      {% endif %}
+      <footer id="landing-footer" class="clearfix">
+        <div class="row logos">
+          {{ page.footer_first }}
+        </div>
+        <div class="row">
+            <div class="columns small-6">
+              &copy; {{ "now"|date('Y') }} visit.brussels
+            </div>
+            <!--Social Icons in Footer-->
+            <div class="columns small-6">
+              {{ page.footer_right }}
+            </div>
+           <!--End of Social Icons in Footer-->
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>

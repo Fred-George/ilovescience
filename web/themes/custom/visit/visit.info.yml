@@ -1,0 +1,55 @@
+name: I Love Science Festival
+description: "I Love Science Festival theme, inherits from the Foundation base theme read <a href=\"http://foundation.zurb.com/docs/index.php\">framework documentation</a>"
+core: 8.x
+type: theme
+base theme: zurb_foundation
+
+# Image appears on admin/appearance
+# screenshot: images/screenshot.jpg
+
+# Uncomment these lines and change "STARTER" to your theme name if you
+# need to add custom CSS or JS
+libraries:
+ - visit/global
+
+# Regions are output in the page.html.twig
+
+regions:
+  meta_header: 'Meta Header'
+  topbar: 'Top bar'
+  topbar_mobile: 'Top bar mobile'
+  header: Header
+  header_right: 'Header right'
+  help: Help
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: Highlighted
+  content: Content
+  sidebar_first: 'Left Sidebar'
+  sidebar_second: 'Right Sidebar'
+  homepage_zone_1: 'Homepage Zone 1'
+  homepage_zone_2: 'Homepage Zone 2'
+  homepage_zone_3: 'Homepage Zone 3'
+  homepage_zone_4: 'Homepage Zone 4'
+  homepage_zone_5: 'Homepage Zone 5'
+  footer_first: 'Footer first column'
+  footer_right: 'Footer right column'
+regions_hidden:
+  page_top: 'Page Top'
+  page_bottom: 'Page bottom'
+  footer_middle: 'Footer middle column'
+  footer_last: 'Footer last column'
+  left_off_canvas: 'Left off canvas'
+  right_off_canvas: 'Right off canvas'
+
+# Hidden regions
+# regions_hidden[]: Page top
+# regions_hidden[]: Page bottom
+
+features:
+  - logo
+  - name
+  - slogan
+  - favicon
+  - comment_user_picture
+  - node_user_picture

@@ -1,0 +1,17 @@
+<article id="node-{{ node.id }}" {{ attributes }}>
+  {{ content.field_image }}
+  <div class="presale-content">
+    {{ title_prefix }}
+    {% if not page %}
+      <h3{{ title_attributes }}>{{ label }}</h3>
+    {% endif %}
+    {{ title_suffix }}
+
+    {# We hide the comments and links now so that we can render them later. #}
+    <div{{ content_attributes }}>
+      {{ content|without('comment', 'links', 'field_tags', 'field_image') }}
+    </div>
+  </div>
+  {{ content.links }}
+  {{ content.comment }}
+</article>
