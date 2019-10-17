@@ -37,21 +37,21 @@ db_offline ? 'db-offline',
 <html{{ html_attributes }} class="no-js">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1957355-20"></script>
+    <!--script async src="https://www.googletagmanager.com/gtag/js?id=UA-1957355-20"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'UA-1957355-20');
-    </script>
+    </script-->
     <head-placeholder token="{{ placeholder_token }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
 
 <!-- Facebook Pixel Code -->
-<script>
+<!--script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -68,19 +68,19 @@ fbq('track', 'PageView');
 <noscript>
   <img height="1" width="1" src="https://www.facebook.com/tr?id=1056824954338666&ev=PageView&noscript=1"/>
   <img height="1" width="1" src="https://www.facebook.com/tr?id=1156557097741730&ev=PageView&noscript=1"/>
-</noscript>
+</noscript-->
 <!-- End Facebook Pixel Code -->
   </head>
   <body{{ attributes.addClass(body_classes) }}>
   <a href="#main-content" class="visually-hidden focusable skip-link">
     {{ 'Skip to main content'|t }}
   </a>
-  <div id="preloader">
-    <div id="status" style="color: #b61056" class="la-ball-fussion la-3x">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div id="preloader">
+      <div id="status" style="color: #51bcee" class="la-ball-atom la-3x">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   </div>
   {{ page_top }}
