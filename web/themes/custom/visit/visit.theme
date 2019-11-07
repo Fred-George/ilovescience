@@ -42,3 +42,17 @@ function visit_preprocess_page(&$variables) {
  * Implements template_preprocess_views_view().
  */
 function visit_preprocess_views_view(&$variables) {}
+
+/**
+ * Use language code for the language switcher
+ *
+ * @param $variables
+ */
+function visit_preprocess_links__language_block(&$variables) {
+
+    foreach ($variables['links'] as $i => $link) {
+    // @var \Drupal\language\Entity\ConfigurableLanguage $linkLanguage
+    $linkLanguage = $link['link']['#options']['language'];
+    $variables['links'][$i]['link']['#title'] = $linkLanguage->get('id');
+    }
+}
