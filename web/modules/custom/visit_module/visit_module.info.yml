@@ -1,0 +1,6 @@
+name: Visit module
+description: Contains custom functionnalities for visit.brussels sites
+package: Custom
+
+type: module
+core: 8.x
