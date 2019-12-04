@@ -23,7 +23,7 @@
         "drupal/anchor_link": "^1.6",
         "drupal/block_class": "^1.0",
         "drupal/console": "^1.0.2",
-        "drupal/core": "^8.6.0",
+        "drupal/core": "^8.8.0",
         "drupal/embed": "^1.0",
         "drupal/entity_embed": "^1.0",
         "drupal/entity_embed_link": "^1.0",
