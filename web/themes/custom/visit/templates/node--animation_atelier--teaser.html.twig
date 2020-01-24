@@ -1,0 +1,14 @@
+<article id="node-{{ node.id }}" {{ attributes }}>
+  <div class="food-content row">
+    {{ title_prefix }}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {{ title_suffix }}
+    <div class="columns medium-6 large-4">
+    {{content.field_image}}
+    </div>
+    {# We hide the comments and links now so that we can render them later. #}
+    <div class="columns medium-6 large-8">
+      {{ content|without('comment', 'links', 'field_tags', 'field_image') }}
+    </div>
+  </div>
+</article>
