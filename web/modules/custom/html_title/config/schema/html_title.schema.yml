@@ -1,6 +1,0 @@
-html_title.setting:
-  type: mapping
-  label: Settings
-  mapping:
-    allow_html_tags:
-      type: string

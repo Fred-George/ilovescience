@@ -1,7 +1,0 @@
-html_title.setting:
-  path: '/admin/config/user-interface/html_title'
-  defaults:
-    _form: '\Drupal\html_title\Form\HtmlTitleSettingConfigForm'
-    _title: 'Html title settings'
-  requirements:
-    _permission: 'administer actions'

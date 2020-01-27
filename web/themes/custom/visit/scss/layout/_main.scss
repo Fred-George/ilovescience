@@ -6,7 +6,7 @@
     }
 }
 h1{
-    margin-bottom: .8em;
+    margin-bottom: .3em;
 }
 .home-first{
     height: 100vh;
@@ -96,6 +96,35 @@ h1{
         background: $white;
     }
 }
+
+.views-exposed-form{
+    padding: 10px;
+    background-color: $primary-color;
+    margin-bottom: 25px;
+    label{
+        font-family: $header-font-family;
+        font-size: 1.1em;
+    }
+    .success.button{
+        background-color: $secondary-color;
+        font-family: $header-font-family;
+        font-size: 1.1em;
+    }
+}
+
+/* Animations view */
+
+.animation-teaser, .performance-teaser{
+    &.odd{
+        background-color: lighten($primary-color, 32);
+    }
+    padding: 10px;
+    margin-bottom: 15px;
+    h2{
+        padding: 0 15px 0 15px;
+    }
+}
+
 /* Presales */
 
 .primary{
@@ -126,6 +155,12 @@ h1{
     .em-big{
         font-size: 2em;
         line-height: 1.4em;
+    }
+
+    .animation-teaser{
+        h2{
+            font-size: 1.7em;
+        }
     }
     
 }

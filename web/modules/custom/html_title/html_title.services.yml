@@ -1,4 +1,0 @@
-services:
-  html_title.filter:
-    class: Drupal\html_title\HtmlTitleFilter
-    arguments: ['@config.factory']
