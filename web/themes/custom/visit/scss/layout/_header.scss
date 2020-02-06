@@ -91,10 +91,10 @@ iframe {
 
 .block-marquedusite{
     position: absolute;
-    float:left;
+    top: 1px;
     height: 50px;
-    width: 50px;
-    margin:5px 20px 5px 0;
+    width: 70px;
+    margin:0 20px 0 0;
     z-index: 20;
 }
 .block-marquedusite-2{
@@ -109,14 +109,20 @@ iframe {
 
 #header{
     width: 100%;
-    background: $primary-color;
     box-shadow: 2px 0px 3px rgba($black, 0.3);
-    .top-bar{
-        background: $white;
-        position: absolute;
-        width: 100%;
-        z-index: 120;
-        border-bottom: 3px solid $primary-color;
+    background: $white;
+    position: absolute;
+    z-index: 120;
+    border-bottom: 3px solid $primary-color;
+    .title-bar{
+        background: $primary-color;
+        button.menu-icon, a{
+            color: $white;
+            &::after{
+                background: $white;
+                box-shadow: 0 7px 0 $white,0 14px 0 $white;
+            }
+        }
     }
     .top-bar-left {
         width: 100%;
@@ -128,31 +134,24 @@ iframe {
             }
             a{
                 transition: all 0.3s ease-out;
-                padding: 5px 10px 5px 10px;
-                margin: 20px 0 20px 15px;
+                padding: 25px 10px 25px 10px;
                 border-color: transparent;
                 border-width: 0 0 0 3px;
                 border-style: solid;
                 &:hover, &:focus, &.is-active{
-                    border-color: $primary-color;
+                    border-color: $secondary-color;
                 }
                 background-color: transparent;
             }
         }
     }
-    .title-bar{
-        background: $primary-color;
-        button.menu-icon, a{
-            color: $white;
-            &::after{
-                background: $white;
-                box-shadow: 0 7px 0 $white,0 14px 0 $white;
-            }
-        }
-    }
+   
     .active {
         color: $primary-color;
         border-color: $primary-color;
+    }
+    .menu > li{
+        display: block;
     }
     .menu > li > a{
         color: $black;
@@ -161,7 +160,7 @@ iframe {
     }
     .social-mobile{
         padding: 5px 0 5px 0;
-        margin: 5px 0 20px 30px;
+        margin: 5px 0 5px 15px;
         a{
             border-style: none;
             background-color: $primary-color;
@@ -192,11 +191,10 @@ iframe {
         }
     }
     #header{
-        background: $secondary-color;
         .top-bar-left {
             width: 100%;
             nav{
-                margin-left: 70px;
+                margin-left: 80px;
                 li{
                     padding-right: 15px;
                 }
@@ -207,6 +205,9 @@ iframe {
                     margin-bottom: 15px;
                 }
             }
+        }
+        .menu > li{
+            display: table-cell;
         }
         .top-bar-right {
             position: relative;
