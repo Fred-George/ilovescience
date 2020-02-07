@@ -148,6 +148,13 @@ h1{
         background-color: lighten($secondary-color, 32);
     }
 }
+.animation-scolaire{
+    padding: 10px;
+    margin-bottom: 15px;
+    &.odd{
+        background-color: lighten($secondary-color, 32);
+    }
+}
 
 /* Presales */
 

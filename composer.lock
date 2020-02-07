@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "8fbf7b02ce6720b626706b6c11ae374e",
@@ -2825,7 +2825,7 @@
                 "shasum": "141be860f2d2e1df67904995fa43774fee355328"
             },
             "require": {
-                "drupal/core": "^8.7"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
@@ -3408,7 +3408,7 @@
                 "shasum": "8e93d4dcf483b1558b800570af1d3b231b8fa6f3"
             },
             "require": {
-                "drupal/core": "~8.0",
+                "drupal/core": "^8 || ^9",
                 "ext-xmlwriter": "*"
             },
             "type": "drupal-module",

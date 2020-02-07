@@ -37,39 +37,36 @@ db_offline ? 'db-offline',
 <html{{ html_attributes }} class="no-js">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!--script async src="https://www.googletagmanager.com/gtag/js?id=UA-1957355-20"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1957355-24"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
-      gtag('config', 'UA-1957355-20');
-    </script-->
+      gtag('config', 'UA-1957355-24');
+    </script>
     <head-placeholder token="{{ placeholder_token }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
 
-<!-- Facebook Pixel Code -->
-<!--script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '1056824954338666');
-fbq('init', '1156557097741730');
-fbq('track', 'PageView');
-</script>
-<noscript>
-  <img height="1" width="1" src="https://www.facebook.com/tr?id=1056824954338666&ev=PageView&noscript=1"/>
-  <img height="1" width="1" src="https://www.facebook.com/tr?id=1156557097741730&ev=PageView&noscript=1"/>
-</noscript-->
-<!-- End Facebook Pixel Code -->
+    fbq('init', '213371269419392'); 
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" src="https://www.facebook.com/tr?id=213371269419392&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
   </head>
   <body{{ attributes.addClass(body_classes) }}>
   <a href="#main-content" class="visually-hidden focusable skip-link">
