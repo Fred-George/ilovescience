@@ -125,6 +125,18 @@ h1{
         padding: 0 15px 0 15px;
     }
 }
+.animation-teaser{
+    &.odd{
+        background-color: lighten($secondary-color, 32);
+    }
+}
+.animation-scolaire{
+    padding: 10px;
+    margin-bottom: 15px;
+    &.odd{
+        background-color: lighten($secondary-color, 32);
+    }
+}
 
 /* Presales */
 
