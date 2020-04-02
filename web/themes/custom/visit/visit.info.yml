@@ -34,6 +34,7 @@ regions:
   homepage_zone_5: 'Homepage Zone 5'
   footer_first: 'Footer first column'
   footer_right: 'Footer right column'
+  footer_info: 'Footer info'
 regions_hidden:
   page_top: 'Page Top'
   page_bottom: 'Page bottom'
