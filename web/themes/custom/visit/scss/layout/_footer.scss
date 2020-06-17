@@ -22,6 +22,19 @@ footer{
             margin: 10px;
         }
     }
+    .block-vieprivee{
+        display: inline;
+        div, p{
+            display: inline;
+        }
+        a{
+            color: $white;
+            text-decoration: underline;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
 }
 .eu-cookie-compliance-banner{
     padding: 20px 0 0 0;
